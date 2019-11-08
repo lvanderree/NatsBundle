@@ -1,29 +1,39 @@
 {
-    "name": "octante/nats-bundle",
+    "name": "arpha/nats-bundle",
     "type": "symfony-bundle",
-    "description": "A Nats bundle for Symfony2",
+    "description": "A Nats bundle for Symfony",
     "keywords": ["nats", "messaging system", "symfony"],
-    "homepage": "https://github.com/octante/OctanteNatsBundle",
+    "homepage": "https://github.com/lvanderree/OctanteNatsBundle",
     "license": "MIT",
     "authors": [{
+        "name": "Leon van der Ree",
+        "email": "leon@synplyworks.com"
+    },{
         "name": "Issel Guberna",
         "email": "issel_guberna@hotmail.com"
     }],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/bethrezen/phpnats.git"
+        }
+    ],
     "require": {
-        "php": ">=5.4.0",
-        "repejota/nats": "^0.4.0",
-        "symfony/framework-bundle": "~2.3|~3.0",
-        "symfony/yaml": "~2.3|~3.0",
-        "symfony/console": "~2.3|~3.0",
-        "symfony/monolog-bundle": "~2.3|~3.0"
+        "php": "^7.1.3",
+        "bethrezen/nats": "dev-master",
+        "symfony/framework-bundle": "4.3.*",
+        "symfony/yaml":  "4.3.*",
+        "symfony/messenger": "4.3.*",
+        "symfony/console": "4.3.*",
+        "symfony/monolog-bundle": "^3.4"
     },
     "require-dev": {
-        "fabpot/php-cs-fixer": "^1.10",
-        "phpunit/phpunit": "^4.8"
+        "friendsofphp/php-cs-fixer": "^2.16",
+        "symfony/phpunit-bridge": "^4.3"
     },
     "autoload": {
         "psr-4": {
-            "Octante\\NatsBundle\\": ""
+            "Arpha\\NatsBundle\\": ""
         }
     }
 }
